@@ -1,0 +1,119 @@
+.audience__header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+  max-width: 540px;
+}
+
+.audience__tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 40px;
+  background: var(--white);
+  padding: 6px;
+  border-radius: var(--radius-lg);
+  width: fit-content;
+  border: 1px solid var(--green-100);
+}
+.audience__tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-soft);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.audience__tab:hover { color: var(--text-dark); }
+.audience__tab.is-active {
+  background: var(--green-500);
+  color: var(--white);
+  font-weight: 500;
+}
+
+.audience__panel {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 64px;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.audience__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.audience__headline {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  line-height: 1.3;
+  color: var(--text-dark);
+}
+.audience__body {
+  font-size: 15px;
+  color: var(--text-mid);
+  line-height: 1.75;
+}
+.audience__benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.audience__benefit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--text-dark);
+}
+
+/* Visual card */
+.audience__visual-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--green-100);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.audience__visual-emoji { font-size: 36px; }
+.audience__visual-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  font-family: var(--font-display);
+}
+.audience__visual-sub { font-size: 13px; color: var(--text-soft); }
+.audience__visual-divider {
+  height: 1px;
+  background: var(--green-100);
+  margin: 8px 0;
+}
+.audience__visual-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-mid);
+}
+.audience__visual-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--green-500);
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .audience__panel { grid-template-columns: 1fr; }
+  .audience__visual { display: none; }
+  .audience__tabs { flex-wrap: wrap; width: 100%; }
+  .audience__tab { flex: 1; justify-content: center; }
+}
